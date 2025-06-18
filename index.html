@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NeoTic – Futuristic Tic-Tac-Toe</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: radial-gradient(circle at top left, #0f172a, #020617);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .glass {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 0 40px rgba(0, 255, 255, 0.08);
+    }
+    .cell:hover {
+      background: rgba(255, 255, 255, 0.05);
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex items-center justify-center text-slate-100">
+  <div class="max-w-md w-full p-6 rounded-2xl glass text-center">
+    <h1 class="text-4xl font-bold text-cyan-400 mb-4 tracking-widest">NeoTic</h1>
+    <p class="mb-4 text-sm text-slate-400">Futuristic 2-Player Tic-Tac-Toe</p>
+
+    <div id="board" class="grid grid-cols-3 gap-2 mb-4">
+      <!-- 9 cells will be generated dynamically -->
+    </div>
+
+    <p id="status" class="text-cyan-300 font-semibold text-lg mb-4">Player X's Turn</p>
+
+    <div class="flex justify-center gap-4">
+      <button id="resetBtn" class="px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg">Reset</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
